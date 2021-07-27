@@ -12,6 +12,12 @@ class UsersController < ApplicationController
         end
     end
 
+    def show
+        if session[:user_id]
+            @user = User.find_by_id(session[:user_id])
+        end
+    end
+
     private
 
     def user_params
