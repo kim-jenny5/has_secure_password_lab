@@ -1,0 +1,10 @@
+<%= form_for :user, url: login_path, method: :post do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <br><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <p><%= f.submit "Log In" %></p>
+<% end %>
+
+<p>Click <%= link_to "here", new_user_path %> if you don't have an account yet.</p>
